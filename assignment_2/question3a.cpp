@@ -16,16 +16,5 @@ int main() {
             break;
         }
     }
-    // int arr[6]={1,2,3,4,5,6};
-    // int count=0;
-    // for(int i=0;i<6;i++){
-    //     while(i<5 && arr[i]==arr[i+1]){
-    //         i++;
-    //     }
-    //     count++;
-    // }
-    // cout<<"number of distinct elements are "<<count<<endl;
-
     return 0;
-
 }
