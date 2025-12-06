@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 class Node{
     public:
@@ -45,4 +45,5 @@ int main() {
     Node* head=array_to_linked_list(c,9);
     cout<<Palindrome(head)<<endl;
     return 0;
+
 }
