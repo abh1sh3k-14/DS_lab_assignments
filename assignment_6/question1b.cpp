@@ -135,5 +135,70 @@ void list_traverse(Node* head){
     cout<<endl;
 }
 int main() {
+    Node* head = nullptr;
+    int choice, n, after;
+    int arr[] = {10, 20, 30, 40, 50};
+    int size = 5;
+    head = array_to_linked_list(arr, size);
+    while(true){
+        cout << "\n====== DOUBLY LINKED LIST MENU ======\n";
+        cout << "1. Insert at Beginning\n";
+        cout << "2. Insert at End\n";
+        cout << "3. Insert After a Node\n";
+        cout << "4. Delete a Node\n";
+        cout << "5. Search a Node\n";
+        cout << "6. Display List\n";
+        cout << "0. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch(choice){
+            case 1:
+                cout << "Enter value to insert at beginning: ";
+                cin >> n;
+                head = insert_at_beginning(head, n);
+                cout << "Node inserted.\n";
+                break;
+
+            case 2:
+                cout << "Enter value to insert at end: ";
+                cin >> n;
+                head = insert_at_end(head, n);
+                cout << "Node inserted.\n";
+                break;
+
+            case 3:
+                cout << "Enter value after which to insert: ";
+                cin >> after;
+                cout << "Enter value to insert: ";
+                cin >> n;
+                head = insert_after(head, after, n);
+                break;
+
+            case 4:
+                cout << "Enter value to delete: ";
+                cin >> n;
+                head = deletenode(head, n);
+                break;
+
+            case 5:
+                cout << "Enter value to search: ";
+                cin >> n;
+                searchnode(head, n);
+                break;
+
+            case 6:
+                cout << "Current List: ";
+                list_traverse(head);
+                break;
+
+            case 0:
+                cout << "Exiting program...\n";
+                return 0;
+
+            default:
+                cout << "Invalid choice! Try again.\n";
+        }
+    }
     return 0;
 }
